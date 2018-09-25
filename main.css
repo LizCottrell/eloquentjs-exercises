@@ -1,0 +1,8 @@
+body {
+    color: #282828;
+    font-family: Helvetica, san-serif;
+    line-height: 1.5rem;
+    margin: 0 auto;
+    max-width: 769px;
+    padding: 40px;
+}

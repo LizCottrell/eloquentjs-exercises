@@ -6,3 +6,9 @@ body {
     max-width: 769px;
     padding: 40px;
 }
+
+.code {
+    color: #424242;
+    font-family: monospace;
+    line-height: 1rem;
+}

@@ -7,14 +7,19 @@
     <body>
 
         <h1>Eloquent JS Exercises</h1>
+
+        <ul>
+            <li><a href="#chapter2">Chapter 2</a> | Looping a triangle, Fizzbuzz, Checkerboard</li>
+            <li><a href="#chapter3">Chapter 3</a> | Minimum, Bean Counting, Recursion</li>
+        </ul>
         
-        <h2>Chapter 2</h2>
+        <h2 id="chapter2">Chapter 2</h2>
         
         <ol>
             <li>
                 <h3>Looping a triangle</h3>
                 <p>Write a loop that makes seven calls to console.log to output the following triangle:</p>
-                <p>
+                <p class="code">
                     #<br />
                     ##<br />
                     ###<br />
@@ -41,8 +46,7 @@
                 <p>
                     Passing this string to console.log should show something like this:
                 </p>
-                <p>   
-       
+                <p class="code">   
                     &nbsp;&nbsp;#&nbsp;&nbsp;#&nbsp;&nbsp;#&nbsp;&nbsp;#<br /> 
                     #&nbsp;&nbsp;#&nbsp;&nbsp;#&nbsp;&nbsp;#<br />
                     &nbsp;&nbsp;#&nbsp;&nbsp;#&nbsp;&nbsp;#&nbsp;&nbsp;#<br /> 
@@ -51,6 +55,66 @@
                     #&nbsp;&nbsp;#&nbsp;&nbsp;#&nbsp;&nbsp;#<br />
                     &nbsp;&nbsp;#&nbsp;&nbsp;#&nbsp;&nbsp;#&nbsp;&nbsp;#<br />
                     #&nbsp;&nbsp;#&nbsp;&nbsp;#&nbsp;&nbsp;#<br />
+                <p>    
+                    When you have a program that generates this pattern, define a binding size = 8 and change the program so that it works for any size, outputting a grid of the given width and height.
+                </p>
+            </li>
+        </ol>
+
+        <h2 id="chapter3">Chapter 3</h2>
+        
+        <ol>
+            <li>
+                <h3>Minimum</h3>
+                <p>The previous chapter introduced the standard function <span class="code">Math.min</span> that returns its smallest argument. We can build something like that now. Write a function min that takes two arguments and returns their minimum.</p>
+                <p class="code">
+                    console.log(min(0, 10));<br />
+                    // → 0<br />
+                    console.log(min(0, -10));<br />
+                    // → -10<br />
+                </p>
+            </li>
+            <li>
+                <h3>Recursion</h3>
+                <p>
+                    We've seen that % (the remainder operator) can be used to test whether a number is even or odd by using % 2 to see whether it’s divisible by two. Here’s another way to define whether a positive whole number is even or odd:
+                </p>
+                <ul>
+                    <li>Zero is even.</li>
+                    <li>One is odd.</li>
+                    <li>For any other number N, its evenness is the same as N - 2.</li>
+                </ul>
+                <p> 
+                    Define a recursive function <span class="code">isEven</span> corresponding to this description. The function should accept a single parameter (a positive, whole number) and return a Boolean.
+                </p>
+                <p>
+                    Test it on 50 and 75. See how it behaves on -1. Why? Can you think of a way to fix this?
+                </p>
+                <p class="code">
+                    console.log(isEven(50));<br />
+                    // → true<br />
+                    console.log(isEven(75));<br />
+                    // → false<br />
+                    console.log(isEven(-1));<br />
+                    // → ??
+                </p>
+            </li>
+            <li>
+                <h3>Bean Counting</h3>
+                <p>
+                    You can get the Nth character, or letter, from a string by writing "string"[N]. The returned value will be a string containing only one character (for example, "b"). The first character has position 0, which causes the last one to be found at position <span class="code">string.length - 1</span>. In other words, a two-character string has length 2, and its characters have positions 0 and 1.
+                </p>
+                <p>
+                    Write a function <span class="code">countBs</span> that takes a string as its only argument and returns a number that indicates how many uppercase “B” characters there are in the string.
+                </p>
+                <p>
+                    Next, write a function called <span class="code">countChar</span> that behaves like <span class="code">countBs</span>, except it takes a second argument that indicates the character that is to be counted (rather than counting only uppercase “B” characters). Rewrite <span class="code">countBs</span> to make use of this new function.
+                </p>
+                <p class="code">   
+                    console.log(countBs("BBC"));<br />
+                    // → 2<br />
+                    console.log(countChar("kakkerlak", "k"));<br />
+                    // → 4<br />
                 <p>    
                     When you have a program that generates this pattern, define a binding size = 8 and change the program so that it works for any size, outputting a grid of the given width and height.
                 </p>

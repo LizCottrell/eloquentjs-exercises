@@ -35,20 +35,20 @@
 
 // 2-3. Chessboard
 
-var size = 8
+var white = ' '
+var black = '#'
+var grid = 8
 
-for (let number = 0; number <= size; number = number +1) {
+let number = 1;
 
-    var black = '#'
-    var white = ' '
-    var isEven = number % 2 == 0
-
-    if (number == isEven) {
-        checkerBoard = ((black + white).repeat(size))
+while (number <= grid) {
+    
+    if (number % 2 == 0) {
+        console.log((white + black).repeat(grid/2));
     } else {
-        checkerBoard = ((white + black).repeat(size))
+        console.log((black + white).repeat(grid/2));
     }
 
-    console.log(checkerBoard);
+    number = number + 1;
+    
 }
-

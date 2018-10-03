@@ -35,20 +35,60 @@
 
 // 2-3. Chessboard
 
-var white = ' '
-var black = '#'
-var grid = 8
+// Attempt 1:
 
-let number = 1;
+// let grid = 8
+// let number = 1;
+// while (number <= grid) {
+//     const white = ' '
+//     const black = '#'
+//     if (number % 2 == 0) {
+//         console.log((white + black).repeat(grid/2));
+//     } else {
+//         console.log((black + white).repeat(grid/2));
+//     }
+//     number = number + 1;
+// }
 
-while (number <= grid) {
-    
-    if (number % 2 == 0) {
-        console.log((white + black).repeat(grid/2));
-    } else {
-        console.log((black + white).repeat(grid/2));
+// Attempt 2:
+
+// let size = 8;
+// let chessboard = '';
+// for (let x = 1; x <= size; x = x + 1) {
+//     if (x % 2 == 0) {
+//         for (let y = 1; y <= size; y = y + 1) {
+//             if (y % 2 == 0) {
+//                 chessboard = chessboard + ' ';
+//             } else {
+//                 chessboard = chessboard + '#';
+//             }
+//         }
+//     } else {
+//         for (let y = 1; y <= size; y = y + 1) {
+//             if (y % 2 == 0) {
+//                 chessboard = chessboard + '#';
+//             } else {
+//                 chessboard = chessboard + ' ';
+//             }
+//         }
+//     }
+//     chessboard = chessboard + '\n';
+// }
+// console.log(chessboard)
+
+// Attempt 3:
+
+let size = 8;
+let chessboard = '';
+for (let x = 1; x <= size; x = x + 1) {
+    for (let y = 1; y <= size; y = y + 1) {
+        if ((x + y) % 2 == 0) {
+            chessboard = chessboard + ' ';
+        } else {
+            chessboard = chessboard + '#';
+        }
     }
-
-    number = number + 1;
-    
+    chessboard = chessboard + '\n';
 }
+console.log(chessboard)
+

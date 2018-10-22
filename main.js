@@ -1,10 +1,10 @@
-// Eloquent JS Exercises
+// // Eloquent JS Exercises
 
 
-//   Chapter 2
-/////////////////
+// //   Chapter 2
+// /////////////////
 
-// 2-1. Looping a triangle
+// // 2-1. Looping a triangle
 
 // for (let number = 0; number <= 7; number = number + 1) {  
 
@@ -15,7 +15,7 @@
 // }
 
 
-// 2-2. FizzBuzz
+// // 2-2. FizzBuzz
 
 // for (let number = 0; number <= 100; number = number +1) {
 
@@ -33,9 +33,9 @@
 // }
 
 
-// 2-3. Chessboard
+// // 2-3. Chessboard
 
-// Attempt 1:
+// // Attempt 1:
 
 // let grid = 8
 // let number = 1;
@@ -50,7 +50,7 @@
 //     number = number + 1;
 // }
 
-// Attempt 2:
+// // Attempt 2:
 
 // let size = 8;
 // let chessboard = '';
@@ -76,7 +76,7 @@
 // }
 // console.log(chessboard)
 
-// Attempt 3:
+// // Attempt 3:
 
 // let size = 8;
 // let chessboard = '';
@@ -101,21 +101,23 @@
 // console.log(min(0, 10));
 // console.log(min(0, -10));
 
-// 3-2. Recursion
+// // 3-2. Recursion
 
-const isEven = function(a) {
-    a = Math.abs(a) // this solves the negative number issue
+// const isEven = function(a) {
+//     a = Math.abs(a) // this solves the negative number issue
 
-    if (a == 0) {
-        return true;
-    } else if (a == 1) {
-        return false;
-    } else {
-        return isEven(a - 2);
-    }
-}
+//     if (a == 0) {
+//         return true;
+//     } else if (a == 1) {
+//         return false;
+//     } else {
+//         return isEven(a - 2);
+//     }
+// }
 
-console.log(isEven(50));
-console.log(isEven(75));
-console.log(isEven(-1));
+// console.log(isEven(50));
+// console.log(isEven(75));
+// console.log(isEven(-1));
+
+// // 3-3. Bean Counting
 

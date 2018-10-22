@@ -7,6 +7,24 @@ body {
     padding: 40px;
 }
 
+h1 {
+    font-weight: normal;
+}
+
+h2 span {
+    font-size: 10px;
+}
+
+a {
+    color: #2a7ba5;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
 .code {
     color: #424242;
     font-family: monospace;

@@ -6,118 +6,46 @@
 
     <body>
 
-        <h1>Eloquent JS Exercises</h1>
+        <h1><a href="http://eloquentjavascript.net" target="_blank">Eloquent JS</a> Exercises</h1>
 
-        <ul>
-            <li><a href="#chapter2">Chapter 2</a> | Looping a triangle, Fizzbuzz, Checkerboard</li>
-            <li><a href="#chapter3">Chapter 3</a> | Minimum, Bean Counting, Recursion</li>
-        </ul>
-        
-        <h2 id="chapter2">Chapter 2</h2>
-        
-        <ol>
-            <li>
-                <h3>Looping a triangle</h3>
-                <p>Write a loop that makes seven calls to console.log to output the following triangle:</p>
-                <p class="code">
-                    #<br />
-                    ##<br />
-                    ###<br />
-                    ####<br />
-                    #####<br />
-                    ######<br />
-                    #######<br />
-                </p>
-            </li>
-            <li>
-                <h3>FizzBuzz</h3>
-                <p>
-                    Write a program that uses console.log to print all the numbers from 1 to 100, with two exceptions. For numbers divisible by 3, print "Fizz" instead of the number, and for numbers divisible by 5 (and not 3), print "Buzz" instead.
-                </p>
-                <p>
-                    When you have that working, modify your program to print "FizzBuzz" for numbers that are divisible by both 3 and 5 (and still print "Fizz" or "Buzz" for numbers divisible by only one of those).
-                </p>
-            </li>
-            <li>
-                <h3>Chessboard</h3>
-                <p>
-                    Write a program that creates a string that represents an 8×8 grid, using newline characters to separate lines. At each position of the grid there is either a space or a "#" character. The characters should form a chessboard.
-                </p>
-                <p>
-                    Passing this string to console.log should show something like this:
-                </p>
-                <p class="code">   
-                    &nbsp;&nbsp;#&nbsp;&nbsp;#&nbsp;&nbsp;#&nbsp;&nbsp;#<br /> 
-                    #&nbsp;&nbsp;#&nbsp;&nbsp;#&nbsp;&nbsp;#<br />
-                    &nbsp;&nbsp;#&nbsp;&nbsp;#&nbsp;&nbsp;#&nbsp;&nbsp;#<br /> 
-                    #&nbsp;&nbsp;#&nbsp;&nbsp;#&nbsp;&nbsp;#<br />
-                    &nbsp;&nbsp;#&nbsp;&nbsp;#&nbsp;&nbsp;#&nbsp;&nbsp;#<br /> 
-                    #&nbsp;&nbsp;#&nbsp;&nbsp;#&nbsp;&nbsp;#<br />
-                    &nbsp;&nbsp;#&nbsp;&nbsp;#&nbsp;&nbsp;#&nbsp;&nbsp;#<br />
-                    #&nbsp;&nbsp;#&nbsp;&nbsp;#&nbsp;&nbsp;#<br />
-                <p>    
-                    When you have a program that generates this pattern, define a binding size = 8 and change the program so that it works for any size, outputting a grid of the given width and height.
-                </p>
-            </li>
-        </ol>
+        <nav>
+            <ul>
+                <li><a href="#chapter2">Chapter 2</a> | Looping a triangle, Fizzbuzz, Checkerboard</li>
+                <li><a href="#chapter3">Chapter 3</a> | Minimum, Bean Counting, Recursion</li>
+                <li><a href="#chapter4">Chapter 4</a> | Data Structures: Objects and Arrays</li>
+            </ul>
+        </nav>
 
-        <h2 id="chapter3">Chapter 3</h2>
+        <p>All links below navigate to the book chapters and exercises.</p>
         
-        <ol>
-            <li>
-                <h3>Minimum</h3>
-                <p>The previous chapter introduced the standard function <span class="code">Math.min</span> that returns its smallest argument. We can build something like that now. Write a function min that takes two arguments and returns their minimum.</p>
-                <p class="code">
-                    console.log(min(0, 10));<br />
-                    // → 0<br />
-                    console.log(min(0, -10));<br />
-                    // → -10<br />
-                </p>
-            </li>
-            <li>
-                <h3>Recursion</h3>
-                <p>
-                    We've seen that % (the remainder operator) can be used to test whether a number is even or odd by using % 2 to see whether it’s divisible by two. Here’s another way to define whether a positive whole number is even or odd:
-                </p>
-                <ul>
-                    <li>Zero is even.</li>
-                    <li>One is odd.</li>
-                    <li>For any other number N, its evenness is the same as N - 2.</li>
-                </ul>
-                <p> 
-                    Define a recursive function <span class="code">isEven</span> corresponding to this description. The function should accept a single parameter (a positive, whole number) and return a Boolean.
-                </p>
-                <p>
-                    Test it on 50 and 75. See how it behaves on -1. Why? Can you think of a way to fix this?
-                </p>
-                <p class="code">
-                    console.log(isEven(50));<br />
-                    // → true<br />
-                    console.log(isEven(75));<br />
-                    // → false<br />
-                    console.log(isEven(-1));<br />
-                    // → ??
-                </p>
-            </li>
-            <li>
-                <h3>Bean Counting</h3>
-                <p>
-                    You can get the Nth character, or letter, from a string by writing "string"[N]. The returned value will be a string containing only one character (for example, "b"). The first character has position 0, which causes the last one to be found at position <span class="code">string.length - 1</span>. In other words, a two-character string has length 2, and its characters have positions 0 and 1.
-                </p>
-                <p>
-                    Write a function <span class="code">countBs</span> that takes a string as its only argument and returns a number that indicates how many uppercase “B” characters there are in the string.
-                </p>
-                <p>
-                    Next, write a function called <span class="code">countChar</span> that behaves like <span class="code">countBs</span>, except it takes a second argument that indicates the character that is to be counted (rather than counting only uppercase “B” characters). Rewrite <span class="code">countBs</span> to make use of this new function.
-                </p>
-                <p class="code">   
-                    console.log(countBs("BBC"));<br />
-                    // → 2<br />
-                    console.log(countChar("kakkerlak", "k"));<br />
-                    // → 4<br />
-                </p>
-            </li>
-        </ol>
+        <section>
+            <h2 id="chapter2"><a href="http://eloquentjavascript.net/02_program_structure.html" target="_blank">Chapter 2</a></h2>     
+            <ol>
+                <li><a href="http://eloquentjavascript.net/02_program_structure.html#i_umoXp9u0e7" target="_blank">Looping a triangle</a></li>
+                <li><a href="http://eloquentjavascript.net/02_program_structure.html#i_rebKE3gdjV" target="_blank">FizzBuzz</a></li>
+                <li><a href="http://eloquentjavascript.net/02_program_structure.html#i_swb9JBtSQQ" target="_blank">Chessboard</a></li>
+            </ol>
+        </section>
+        
+        <section>
+            <h2 id="chapter3"><a href="http://eloquentjavascript.net/03_functions.html" target="_blank">Chapter 3</a></h2>      
+            <ol>
+                <li><a href="http://eloquentjavascript.net/03_functions.html#i_XTmO7z7MPq" target="_blank">Minimum</a></li>
+                <li><a href="http://eloquentjavascript.net/03_functions.html#i_jxl1p970Fy" target="_blank">Recursion</a></li>
+                <li><a href="http://eloquentjavascript.net/03_functions.html#i_3rsiDgC2do" target="_blank">Bean Counting</a></li>
+            </ol>
+        </section>
+        
+        <section>
+            <h2 id="chapter4"><a href="http://eloquentjavascript.net/04_data.html" target="_blank">Chapter 4</a></h2>
+            <ol>
+                <li><a href="http://eloquentjavascript.net/04_data.html#i_8ZspxiCEC/" target="_blank">The sum of a range</a></li>
+                <li><a href="http://eloquentjavascript.net/04_data.html#i_6xTmjj4Rf5" target="_blank">Reversing an array</a></li>
+                <li><a href="http://eloquentjavascript.net/04_data.html#i_nSTX34CM1M" target="_blank">A list</a></li>
+                <li><a href="http://eloquentjavascript.net/04_data.html#i_IJBU+aXOIC" target="_blank">Deep Comparison</a></li>
+            </ol>
+        </section>
+        
         
         <script src="./main.js"></script>
     </body>

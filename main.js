@@ -78,17 +78,26 @@
 
 // Attempt 3:
 
-let size = 8;
-let chessboard = '';
-for (let x = 1; x <= size; x = x + 1) {
-    for (let y = 1; y <= size; y = y + 1) {
-        if ((x + y) % 2 == 0) {
-            chessboard = chessboard + ' ';
-        } else {
-            chessboard = chessboard + '#';
-        }
-    }
-    chessboard = chessboard + '\n';
+// let size = 8;
+// let chessboard = '';
+// for (let x = 1; x <= size; x = x + 1) {
+//     for (let y = 1; y <= size; y = y + 1) {
+//         if ((x + y) % 2 == 0) {
+//             chessboard = chessboard + ' ';
+//         } else {
+//             chessboard = chessboard + '#';
+//         }
+//     }
+//     chessboard = chessboard + '\n';
+// }
+// console.log(chessboard)
+
+// 3-1. Minimum
+
+const min = function(a, b){
+    return (Math.min(a, b));
 }
-console.log(chessboard)
+
+console.log(min(0, 10));
+console.log(min(0, -10));
 

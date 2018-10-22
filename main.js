@@ -94,10 +94,28 @@
 
 // 3-1. Minimum
 
-const min = function(a, b){
-    return (Math.min(a, b));
+// const min = function(a, b){
+//     return (Math.min(a, b));
+// }
+
+// console.log(min(0, 10));
+// console.log(min(0, -10));
+
+// 3-2. Recursion
+
+const isEven = function(a) {
+    a = Math.abs(a) // this solves the negative number issue
+
+    if (a == 0) {
+        return true;
+    } else if (a == 1) {
+        return false;
+    } else {
+        return isEven(a - 2);
+    }
 }
 
-console.log(min(0, 10));
-console.log(min(0, -10));
+console.log(isEven(50));
+console.log(isEven(75));
+console.log(isEven(-1));
 

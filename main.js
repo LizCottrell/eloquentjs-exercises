@@ -121,3 +121,29 @@
 
 // // 3-3. Bean Counting
 
+const countBs = function(text) {
+    let counter = 0
+
+    for (let x of text) {
+        if (x == 'B') {
+            counter++
+        }
+    }
+
+    return counter
+}
+
+const countChar = function(string, letter) {
+    let counter = 0
+
+    for (let x of string) {
+        if (x == letter) {
+            counter++
+        }
+    }
+
+    return counter
+}
+
+console.log(countBs("BBC"));
+console.log(countChar("kakkerlak", "k"));

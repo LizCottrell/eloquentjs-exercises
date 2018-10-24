@@ -1,8 +1,7 @@
 // // Eloquent JS Exercises
 
 
-// //   Chapter 2
-// /////////////////
+
 
 // // 2-1. Looping a triangle
 
@@ -13,6 +12,8 @@
 //     console.log(hashTriangle);
 
 // }
+
+
 
 
 // // 2-2. FizzBuzz
@@ -31,6 +32,8 @@
 
 //     console.log(number);
 // }
+
+
 
 
 // // 2-3. Chessboard
@@ -92,7 +95,10 @@
 // }
 // console.log(chessboard)
 
-// 3-1. Minimum
+
+
+
+// // 3-1. Minimum
 
 // const min = function(a, b){
 //     return (Math.min(a, b));
@@ -119,31 +125,148 @@
 // console.log(isEven(75));
 // console.log(isEven(-1));
 
+
+
+
 // // 3-3. Bean Counting
 
-const countBs = function(text) {
-    let counter = 0
+// const countBs = function(text) {
+//     let counter = 0
 
-    for (let x of text) {
-        if (x == 'B') {
-            counter++
-        }
+//     for (let x of text) {
+//         if (x == 'B') {
+//             counter++
+//         }
+//     }
+
+//     return counter
+// }
+
+// const countChar = function(string, letter) {
+//     let counter = 0
+
+//     for (let x of string) {
+//         if (x == letter) {
+//             counter++
+//         }
+//     }
+
+//     return counter
+// }
+
+// console.log(countBs("BBC"));
+// console.log(countChar("kakkerlak", "k"));
+
+
+
+
+// // 4-1. The sum of a range
+
+// function range(start, end, step){
+//     let array = [] // start with an empty array
+//     let counter = step || 1
+
+//     if ( counter < 0 ) {
+//         for ( let x = start; x >= end; x += counter ) {
+//             let currentNumber = x;
+//             array.push(currentNumber); 
+//         }
+
+//     } else {
+//         for ( let x = start; x <= end; x += counter ) {
+//             let currentNumber = x;
+//             array.push(currentNumber); 
+//         }
+//     }
+
+//     return array
+// }
+
+// function sum(array){
+//     let total = 0;
+    
+//     for ( let x = 0; x < array.length; x++ ) {
+//         let currentNumber = array[x];
+//         total += currentNumber;
+//     }
+
+//     return total
+// }
+
+// console.log(range(1, 10));
+// // → [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+// console.log(sum(range(1, 10)));
+// // // 55
+// console.log(range(5, 2, -1));
+// // → [5, 4, 3, 2]
+
+
+
+// 4-2. Reversing an array
+// Cannot use the standard .reverse method
+
+function reverseArray(originalArray) {
+    let newArray = []
+    
+    for ( let x = originalArray.length - 1; x >= 0; x-- ) {
+        let endElement = originalArray[x];
+        newArray.push(endElement);
     }
 
-    return counter
+    return newArray
 }
 
-const countChar = function(string, letter) {
-    let counter = 0
+function reverseArrayInPlace(originalArray) {
+    let halfLength = Math.floor(originalArray.length/2)
 
-    for (let x of string) {
-        if (x == letter) {
-            counter++
-        }
+    for ( let x = 0; x <= halfLength; x++ ) {
+        let firstNumber = originalArray[x];
+        let lastNumber = originalArray[originalArray.length - 1 - x]
+        originalArray[x] = lastNumber
+        originalArray[originalArray.length - 1 - x] = firstNumber
     }
 
-    return counter
+    return originalArray;
 }
 
-console.log(countBs("BBC"));
-console.log(countChar("kakkerlak", "k"));
+console.log(reverseArray(["A", "B", "C"]));
+// → ["C", "B", "A"];
+let arrayValue = [1, 2, 3, 4, 5];
+reverseArrayInPlace(arrayValue);
+console.log(arrayValue);
+// → [5, 4, 3, 2, 1]
+
+
+
+
+// // 4-3. A List
+
+// function arrayToList(){
+
+// }
+
+// function listToArray(){}
+
+// console.log(arrayToList([10, 20]));
+// // → {value: 10, rest: {value: 20, rest: null}}
+// console.log(listToArray(arrayToList([10, 20, 30])));
+// // → [10, 20, 30]
+// console.log(prepend(10, prepend(20, null)));
+// // → {value: 10, rest: {value: 20, rest: null}}
+// console.log(nth(arrayToList([10, 20, 30]), 1));
+// // → 20
+
+
+
+
+// // 4-4. Deep Comparison
+
+// // Your code here.
+
+// let obj = {here: {is: "an"}, object: 2};
+// console.log(deepEqual(obj, obj));
+// // → true
+// console.log(deepEqual(obj, {here: 1, object: 2}));
+// // → false
+// console.log(deepEqual(obj, {here: {is: "an"}, object: 2}));
+// // → true
